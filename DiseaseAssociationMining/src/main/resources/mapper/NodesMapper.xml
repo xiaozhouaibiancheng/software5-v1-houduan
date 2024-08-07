@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.edu.cqupt.diseaseassociationmining.mapper.NodesMapper">
+
+<select id="getAllNodes" resultType="com.edu.cqupt.diseaseassociationmining.entity.Nodes">
+    select * from public.nodes
+</select>
+
+    <select id="getRelationships" resultType="com.edu.cqupt.diseaseassociationmining.entity.Relationships">
+        select * from public.relationships
+    </select>
+</mapper>

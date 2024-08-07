@@ -1,0 +1,50 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://10.16.48.219:5432/software5
+    username: pg
+    password: 111111
+    driver-class-name: org.postgresql.Driver
+    host: 10.16.48.219
+    dbname: software5
+    port: 5432
+  servlet:
+    multipart:
+      enabled: true # 开启文件上传
+      file-size-threshold: 2KB # 文件写入磁盘的阈值
+      max-file-size: 100MB
+      max-request-size: 215MB # 最大请求值大小
+gorit:
+  file:
+    root:
+#      path1: /home/data/WorkSpace/Backend/software5/file/
+#      path2: /home/data/WorkSpace/Backend/software5/algorithm/
+      path1: C:\Users\hp-pc\Desktop\software5\code\houduan\DiseaseAssociationMining\DiseaseAssociationMining\src\main\resources\file\
+      path2: C:\Users\hp-pc\Desktop\software5\code\houduan\DiseaseAssociationMining\DiseaseAssociationMining\src\main\resources\algorithm\
+      #      path1: F:/java/medical/DiseaseAssociationMining_new (2)/DiseaseAssociationMining/src/main/resources/file/
+      #      path2: F:/java/medical/DiseaseAssociationMining_new (2)/DiseaseAssociationMining/src/main/resources/algorithm/
+
+#database:
+algorithm:
+  py:
+#    path1: /home/data/WorkSpace/Backend/software5/Arithmetic/IAMB/IAMB-mul.py
+#    path2: /home/data/WorkSpace/Backend/software5/Arithmetic/IAMB/IAMB1.py
+#    path3: /home/data/WorkSpace/Backend/software5/Arithmetic/SFDRMB/SF_DRMB1.py
+    path1: src/main/resources/Arithmetic/IAMB/IAMB-mul.py
+    path2: src/main/resources/Arithmetic/IAMB/IAMB1.py
+    path3: src/main/resources/Arithmetic/SFDRMB/SF_DRMB1.py
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+server:
+  port: 8085
+application:
+  python:
+#    emvironment: /home/cqupt/anaconda3/envs/software4/bin/python
+    #    emvironment: C:/Users/hp/anaconda3/python.exe
+    emvironment: D:\ProgramData\Anaconda3\envs\myenv\python.exe
+
+pagehelper:
+  helperDialect: postgresql  # 设置数据库类型为PostgreSQL
+  reasonable: true      # 分页合理化参数，默认值为 false，设置为 true 后，如果 pageNum 小于 1，则自动设置为 1，如果 pageNum 大于总页数，则自动设置为最后一页
+  supportMethodsArguments: true  # 支持通过 Mapper 方法参数来传递分页参数，默认值为 false
